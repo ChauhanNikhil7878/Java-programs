@@ -1,15 +1,21 @@
-public class Main
+public class Calculate
 {
- int sum(int x, int y)
+ int num1, num2; // Member variable
+ Calculate(int x, int y) //constructor initilize the value of class
     {
-        return (x+y);
-        
+     num1 = x;
+     num2 = y;
     }
-      public static void main(String[] args) 
+    int sum()
+{
+    return(num1+num2);
+}    
+
+	public static void main(String[] args) 
 	{   
 	    int result;
-	    Main obj1 = new Main();
-	    result = obj1.sum(10,20);
-	    System.out.println("The result is::" + result);
+	    Calculate obj1 = new Calculate(10,20);
+	    result = obj1.sum();
+		System.out.println("The result is::" + result);
 	}
 }
